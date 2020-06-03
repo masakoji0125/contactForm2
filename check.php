@@ -29,9 +29,6 @@ $email = $_POST['email'];
 $content = $_POST['content'];
 // echo $content;
 
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -51,7 +48,15 @@ $content = $_POST['content'];
         <input type="hidden" name="email" value="<?= h($email); ?>">
         <input type="hidden" name="content" value="<?= h($content); ?>">
         <button type="button" onclick="history.back()" >戻る</button>
+
+        <?php if ($username != '' && $email != '' && $content != '') { ?>
         <button type="submit" >確定</button>
+        <?php } ?>
     </form>
 </body>
 </html>
+
+<?php
+
+
+?>
